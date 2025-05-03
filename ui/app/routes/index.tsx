@@ -22,21 +22,9 @@ type Tile = {
 };
 
 export const loader: LoaderFunction = async () => {
-  //const civs = await fetch("http://localhost:8000/api/civilizations").then(res => res.json());
-  //const map = await fetch("http://localhost:8000/api/map").then(res => res.json());
-  //return json({ civs, map });
-  return json({
-    civs: [
-      { id: 1, name: "Civ1", leader: "Leader1", color: "#FF0000" },
-      { id: 2, name: "Civ2", leader: "Leader2", color: "#00FF00" },
-    ],
-    map: [
-      { x: 0, y: 0, terrain: "Grass", ownerId: 1 },
-      { x: 0, y: 1, terrain: "Forest", ownerId: 2 },
-      { x: 1, y: 0, terrain: "Mountain" },
-      { x: 1, y: 1, terrain: "Water" },
-    ],
-  });
+  const civs = await fetch("http://localhost:8000/api/civilizations").then(res => res.json());
+  const map = await fetch("http://localhost:8000/api/map").then(res => res.json());
+  return json({ civs, map });
 };
 
 export default function Index() {
