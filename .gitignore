@@ -1,0 +1,26 @@
+# Node/Remix/React (ui)
+ui/node_modules/
+ui/.cache/
+ui/build/
+ui/.next/
+ui/.env*
+ui/dist/
+ui/.DS_Store
+
+# Python/FastAPI (backend)
+backend/__pycache__/
+backend/*.pyc
+backend/env/
+backend/.env*
+backend/.DS_Store
+
+# macOS system files
+.DS_Store
+
+# General
+*.log
+*.sqlite3
+.env*
+
+# VSCode
+.vscode/
